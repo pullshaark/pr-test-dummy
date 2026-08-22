@@ -4,7 +4,7 @@
 The `pr-test-dummy` repository serves as a minimal placeholder project used to test repository interactions, automation tools, pull request workflows, and code review systems. [FACT]
 
 ## Core Features
-* Minimal documentation repository placeholder. [FACT]
+* Markdown documentation repository placeholder. [FACT]
 * Target project for testing Git operations, PR diffs, and automated code review workflows. [FACT]
 
 ## Users
@@ -97,7 +97,7 @@ The repository is a minimal container consisting only of plain text and markdown
 * [FACT] Repository operations are reserved exclusively for internal testing and workflow validation purposes.
 * [FACT] The application handles non-sensitive data.
 * [FACT] Pull requests against this repository are expected to be test modifications or dummy commits.
-* [FACT] and [HYPOTHESIS] Production application code is not expected to be committed to this repository [INFERRED].
+* [FACT] and [HYPOTHESIS] Executable production application code is not expected in this repository [INFERRED].
 
 ---
 
