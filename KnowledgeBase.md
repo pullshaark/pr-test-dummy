@@ -4,7 +4,7 @@
 The `pr-test-dummy` repository serves as a minimal placeholder project used to test repository interactions, automation tools, pull request workflows, and code review systems. [FACT]
 
 ## Core Features
-* Minimal placeholder documentation repository. [FACT]
+* Minimal documentation repository placeholder. [FACT]
 * Target project for testing Git operations, PR diffs, and automated code review workflows. [FACT]
 
 ## Users
@@ -37,16 +37,16 @@ The `pr-test-dummy` repository serves as a minimal placeholder project used to t
 # ARCHITECTURE
 
 ## High Level Design
-The repository is a minimal container currently consisting only of markdown documentation without application logic, build pipelines, or backend frameworks. [FACT]
+The repository is a minimal container consisting only of plain text and markdown documentation files without application logic, build pipelines, or backend frameworks. [FACT]
 
 ## Request Flow
 * Not applicable. The repository has no active server or API components. [FACT]
 
 ## Data Flow
-* Changes are introduced through local Git commits and GitHub Pull Requests. [FACT]
+* Content modifications are introduced through local Git commits and GitHub Pull Requests. [FACT]
 
 ## Important Modules
-* **Documentation Module**: Standard `README.md` file located at the repository root. [FACT]
+* **Documentation & Sandbox Module**: Root files (`README.md`, `KnowledgeBase.md`) used for generating diffs and validating automated pull request workflows. [FACT]
 
 ## System Boundaries
 * Restricted entirely to the Git source control system and GitHub platform boundaries. [FACT]
@@ -57,6 +57,7 @@ The repository is a minimal container currently consisting only of markdown docu
 
 ```
 .
+├── KnowledgeBase.md
 └── README.md
 ```
 
@@ -68,8 +69,13 @@ The repository is a minimal container currently consisting only of markdown docu
   * **Dependencies**: None. [FACT]
 
 * `README.md`
-  * **Purpose**: Primary repository entry point and test text file. [FACT]
-  * **Responsibilities**: Display repository name and simple test line modifications. [FACT]
+  * **Purpose**: Primary repository entry point and test target file. [FACT]
+  * **Responsibilities**: Display repository title and test line modifications (`merging - 01 pr`, `ertertre`). [FACT]
+  * **Dependencies**: None. [FACT]
+
+* `KnowledgeBase.md`
+  * **Purpose**: Repository knowledge base and instructions for AI code review systems. [FACT]
+  * **Responsibilities**: Maintain persistent memory of architecture, rules, stack, and guidelines. [FACT]
   * **Dependencies**: None. [FACT]
 
 ---
@@ -80,13 +86,18 @@ The repository is a minimal container currently consisting only of markdown docu
   * **Purpose**: Stores simple text content used to generate Git diffs and validate PR processes. [FACT]
   * **Relationships**: None. [FACT]
 
+* **Entity**: `Project Knowledge Memory` (`KnowledgeBase.md`)
+  * **Purpose**: Persists structured architectural, convention, and review rules for AI tools. [FACT]
+  * **Relationships**: Synthesizes whole repository context. [FACT]
+
 ---
 
 # BUSINESS_RULES
 
-* Repository operations are reserved exclusively for internal testing purposes. [FACT]
-* The application handles non-sensitive data. [FACT]
-* Pull requests against this repository are expected to be test modifications or dummy commits. [FACT] [HYPOTHESIS] Production application code is not expected to be committed to this repository [INFERRED].
+* [FACT] Repository operations are reserved exclusively for internal testing and workflow validation purposes.
+* [FACT] The application handles non-sensitive data.
+* [FACT] Pull requests against this repository are expected to be test modifications or dummy commits.
+* [FACT] and [HYPOTHESIS] Production application code is not expected to be committed to this repository [INFERRED].
 
 ---
 
@@ -94,7 +105,7 @@ The repository is a minimal container currently consisting only of markdown docu
 
 ## Naming Patterns
 * **Repository Name**: Kebab-case (`pr-test-dummy`). [FACT]
-* **Standard Documentation**: Standard uppercase markdown convention (`README.md`). [FACT]
+* **Standard Documentation**: Standard capitalized markdown convention (`README.md`, `KnowledgeBase.md`). [FACT]
 
 ## File Organization
 * Flat root-level file layout. [FACT]
@@ -103,7 +114,7 @@ The repository is a minimal container currently consisting only of markdown docu
 * None present. No application code exists. [FACT]
 
 ## State Management
-* None present. [FACT]
+* None present. Repository state is tracked solely through Git commits. [FACT]
 
 ## Database Access Patterns
 * None present. [FACT]
@@ -112,7 +123,7 @@ The repository is a minimal container currently consisting only of markdown docu
 * None present. [FACT]
 
 ## Security Patterns
-* Repository relies on standard GitHub permissions; no sensitive secrets, tokens, or proprietary data should be committed. [FACT]
+* Repository relies on standard GitHub permissions; no sensitive secrets, credentials, or proprietary data should be committed. [FACT]
 
 ---
 
@@ -123,13 +134,13 @@ The repository is a minimal container currently consisting only of markdown docu
 
 ## Anti-Patterns
 * Accidentally committing credentials, secret keys, or sensitive internal data in test commits. [INFERRED]
-* Unintended deletion of baseline configuration or documentation files. [INFERRED]
+* Unintended total deletion of baseline documentation or configuration files. [INFERRED]
 
 ## Performance Concerns
 * None. File sizes and commit histories remain trivial. [FACT]
 
 ## Security Concerns
-* Verify that test changes do not leak private environment parameters, credentials, or token keys. [FACT]
+* Verify that test changes do not leak private environment parameters, API tokens, or secret keys. [FACT]
 
 ## Maintainability Concerns
 * Ensure markdown files remain well-formatted and readable. [INFERRED]
@@ -140,14 +151,17 @@ The repository is a minimal container currently consisting only of markdown docu
 
 * `README.md`
   * **Responsibility**: Holds repository title and active test lines (`merging - 01 pr`, `ertertre`). [FACT]
-  * **Why changes are risky**: It is currently the single source of content in the repository; deletion leaves the repository completely empty. [FACT]
+  * **Why changes are risky**: Deletion removes the main introductory entry point of the repository. [FACT]
+* `KnowledgeBase.md`
+  * **Responsibility**: Provides authoritative architectural memory and rules for AI review context. [FACT]
+  * **Why changes are risky**: Corrupting or removing this file degrades automated code review accuracy and memory consistency. [FACT]
 
 ---
 
 # KNOWN_RISKS
 
 * **Lack of Automated Testing / CI**: There are no automated linters or test scripts present to validate repository integrity automatically. [FACT]
-* **Unstructured Content**: Dummy commits may introduce arbitrary text strings (e.g., `ertertre`) or unstructured content. [INFERRED]
+* **Unstructured Content**: Dummy commits may introduce arbitrary text strings (e.g., `ertertre`) or unstructured content. [FACT] and [HYPOTHESIS]
 
 ---
 
