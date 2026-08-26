@@ -1,12 +1,12 @@
 # PROJECT_IDENTITY
 
 ## Purpose
-The `pr-test-dummy` repository serves as a minimal sandbox environment for testing repository interactions, GitHub pull request workflows, automation tools, and AI code review integrations. [FACT]
+The `pr-test-dummy` repository serves as a lightweight placeholder and sandbox environment for testing repository interactions, GitHub pull request workflows, automation tools, and AI code review systems. [FACT]
 
 ## Core Features
 * Markdown documentation sandbox (`README.md`, `KnowledgeBase.md`). [FACT]
-* Command-line test script (`main.py` for voting age verification testing). [FACT]
-* Target project for testing repository integrations and automated PR review engines. [FACT]
+* Command-line testing scripts (`main.py` for voting age verification). [FACT]
+* Testbed for validating repository integrations and automated code review pipelines. [FACT]
 
 ## Users
 * Internal team members or employees testing automated workflows, code review systems, or repository integrations. [FACT]
@@ -19,7 +19,7 @@ The `pr-test-dummy` repository serves as a minimal sandbox environment for testi
 * None. [FACT]
 
 ## Backend
-* Python (Standalone script `main.py` using standard library; no backend frameworks). [FACT]
+* Python (Standalone script `main.py` using standard library; no active web or backend frameworks). [FACT]
 
 ## Database
 * None. [FACT]
@@ -31,28 +31,28 @@ The `pr-test-dummy` repository serves as a minimal sandbox environment for testi
 * **VCS Host**: GitHub repository (`pullshaark/pr-test-dummy`). [FACT]
 
 ## External Services
-* None identified in codebase. [FACT]
+* None identified in current codebase. [FACT]
 
 ---
 
 # ARCHITECTURE
 
 ## High Level Design
-The repository is a minimal sandbox composed of flat root-level markdown files and standalone execution scripts without active web frameworks, build pipelines, or backend databases. [FACT]
+The repository is a flat, file-based sandbox consisting of root-level documentation files and standalone Python CLI scripts. It contains no active web servers, build pipelines, or backend infrastructure. [FACT]
 
 ## Request Flow
-* Not applicable. The repository has no web servers, API endpoints, or network listeners. [FACT]
+* Not applicable. The repository has no API endpoints or network listeners. [FACT]
 
 ## Data Flow
-* CLI user input is received via standard input (`input()`) in standalone Python scripts. [FACT]
-* Source code and documentation updates flow via Git commits and GitHub Pull Requests into target branches. [FACT]
+* CLI user input is collected via standard input (`input()`) in local execution scripts. [FACT]
+* Code updates and documentation modifications flow through Git commits and GitHub Pull Requests into the repository. [FACT]
 
 ## Important Modules
-* **Documentation & Memory Module**: Root markdown files (`README.md`, `KnowledgeBase.md`) used for workflow testing and storing review rules. [FACT]
-* **CLI Scripts Module**: Standalone Python script (`main.py`) executing CLI interaction logic. [FACT]
+* **Documentation & Knowledge Base**: Root markdown files (`README.md`, `KnowledgeBase.md`) housing test strings and persistent memory rules for automated review context. [FACT]
+* **CLI Execution Script**: Standalone script (`main.py`) executing basic interactive user prompt logic. [FACT]
 
 ## System Boundaries
-* Restricted strictly to local Python standard library execution and GitHub repository VCS boundaries. [FACT]
+* Restricted strictly to standard Python CLI execution and GitHub platform source code control boundaries. [FACT]
 
 ---
 
@@ -68,23 +68,23 @@ The repository is a minimal sandbox composed of flat root-level markdown files a
 ### Directory & File Responsibilities
 
 * `/` (Root Directory)
-  * **Purpose**: Primary repository root storing project files, documentation, and test scripts. [FACT]
-  * **Responsibilities**: Contain root documentation, project memory, and test scripts. [FACT]
-  * **Dependencies**: Python standard library runtime for executable `.py` files. [FACT]
+  * **Purpose**: Primary repository root housing documentation files, project memory, and test scripts. [FACT]
+  * **Responsibilities**: Store all project documentation and scripts in a flat layout. [FACT]
+  * **Dependencies**: Standard Python runtime environment. [FACT]
 
 * `README.md`
-  * **Purpose**: Main repository documentation file and target for test pull requests. [FACT]
-  * **Responsibilities**: Display repository header and record test string changes (e.g., `merging - 01 pr`, `ertertre`). [FACT]
+  * **Purpose**: Base documentation and repository entry point. [FACT]
+  * **Responsibilities**: Contain project header and serve as a target for test commit diffs (e.g., `merging - 01 pr`, `ertertre`). [FACT]
   * **Dependencies**: None. [FACT]
 
 * `KnowledgeBase.md`
-  * **Purpose**: Long-term memory repository documenting project rules, tech stack, and guidelines for AI review engines. [FACT]
-  * **Responsibilities**: Store context, guidelines, and rule enforcement data for automated code reviews. [FACT]
+  * **Purpose**: Long-term AI memory and architectural rule definition document. [FACT]
+  * **Responsibilities**: Provide context, domain rules, and guidelines for AI automated review engines. [FACT]
   * **Dependencies**: None. [FACT]
 
 * `main.py`
-  * **Purpose**: Standalone CLI script for voting age verification logic. [FACT]
-  * **Responsibilities**: Prompt user for age input and output voting eligibility status for India. [FACT]
+  * **Purpose**: Standalone CLI test script for voting age verification logic. [FACT]
+  * **Responsibilities**: Prompt user for age input and output voting eligibility status. [FACT]
   * **Dependencies**: Python standard library. [FACT]
 
 ---
@@ -92,12 +92,12 @@ The repository is a minimal sandbox composed of flat root-level markdown files a
 # DOMAIN_MODEL
 
 * **Entity**: `Test Document` (`README.md`)
-  * **Purpose**: Stores text content used to generate Git diffs and validate pull request workflows. [FACT]
+  * **Purpose**: Plaintext document used to generate Git diffs and validate pull request automations. [FACT]
   * **Relationships**: None. [FACT]
 
 * **Entity**: `Knowledge Base Memory` (`KnowledgeBase.md`)
-  * **Purpose**: Holds project metadata, domain facts, and rules for AI review context. [FACT]
-  * **Relationships**: Provides system-wide architectural and review guidance. [FACT]
+  * **Purpose**: Holds project identity, domain facts, and review rules for automated reviewer models. [FACT]
+  * **Relationships**: Informs review behavior across all repository changes. [FACT]
 
 * **Entity**: `Voter Verification Script` (`main.py`)
   * **Purpose**: Processes CLI user age input to check voting eligibility in India. [FACT]
@@ -109,8 +109,9 @@ The repository is a minimal sandbox composed of flat root-level markdown files a
 
 * Repository operations and pull requests are reserved for internal testing and workflow validation purposes. [FACT]
 * The project handles non-sensitive, dummy data exclusively. [FACT]
-* Statutory legal voting age in India is 18 years old, though current script logic evaluates `age > 10`. [FACT] and [HYPOTHESIS]
-* Executable scripts in the repository must remain self-contained with zero unneeded third-party dependencies. [INFERRED]
+* Statutory legal voting age in India is 18 years old. [FACT]
+* Current script implementation evaluates eligibility with `age > 10` rather than the legal requirement of `18`. [FACT] and [HYPOTHESIS]
+* Scripts in this repository must remain lightweight and avoid unnecessary third-party package dependencies. [INFERRED]
 
 ---
 
@@ -118,17 +119,17 @@ The repository is a minimal sandbox composed of flat root-level markdown files a
 
 ## Naming Patterns
 * **Repository Name**: Kebab-case (`pr-test-dummy`). [FACT]
-* **Documentation Files**: Uppercase / PascalCase (`README.md`, `KnowledgeBase.md`). [FACT]
-* **Python Files**: Snake_case (`main.py`). [FACT]
+* **Documentation Files**: PascalCase / Uppercase (`README.md`, `KnowledgeBase.md`). [FACT]
+* **Python Scripts**: Snake_case (`main.py`). [FACT]
 
 ## File Organization
-* Flat root-level layout without subdirectories. [FACT]
+* Flat root-level file layout without subdirectories. [FACT]
 
 ## Error Handling
-* Currently missing; standard input in CLI scripts is consumed without input type validation or `try-except` exception handling. [FACT]
+* Currently unhandled. Standard input in CLI scripts is read directly without input validation or exception wrapping. [FACT]
 
 ## State Management
-* Stateless execution; scripts execute ephemerally per invocation. [FACT]
+* Ephemeral execution. CLI scripts run statelessly on standard execution. [FACT]
 
 ## Database Access Patterns
 * None present. [FACT]
@@ -137,71 +138,71 @@ The repository is a minimal sandbox composed of flat root-level markdown files a
 * None present. [FACT]
 
 ## Security Patterns
-* Platform-level GitHub authorization rules apply; environment secrets, access tokens, or private credentials must not be committed. [FACT]
+* Relies on standard GitHub access controls. Plaintext environment variables, proprietary credentials, or secret tokens must never be committed. [FACT]
 
 ---
 
 # REVIEW_GUIDELINES
 
 ## Expected Architectural Patterns
-* Maintain lightweight and flat repository structures unless complex modules are explicitly introduced. [INFERRED]
-* Perform explicit type conversion on standard CLI inputs before numerical operations in Python scripts (e.g., `int(input(...))`). [FACT]
+* Keep repository structure flat and lightweight unless complex modules are explicitly requested. [INFERRED]
+* Ensure explicit type casting when reading numerical data from CLI inputs (e.g., `int(input(...))`). [FACT]
 
 ## Anti-Patterns
-* Direct comparison between string types and integer types (e.g., comparing string return from `input()` with integer `10` in Python 3 causing `TypeError`). [FACT]
-* Business threshold mismatches (e.g., checking Indian voting eligibility using `age > 10` instead of `age >= 18`). [FACT]
+* Direct comparison between string inputs and integer literals in Python (e.g., `input() > 10` causes a runtime `TypeError` in Python 3). [FACT]
+* Inaccurate business threshold checks (e.g., validating Indian voting eligibility using `age > 10` instead of `age >= 18`). [FACT]
 * Spelling errors in user-facing CLI output strings (e.g., `Eliglble`, `elegble`). [FACT]
-* Committing private credentials or unnecessary binary/build artifacts. [INFERRED]
+* Unintended commit of secret tokens or sensitive internal data. [INFERRED]
 
 ## Performance Concerns
-* Negligible due to tiny file footprints and trivial execution overhead. [FACT]
+* None. File footprints and execution times are trivial. [FACT]
 
 ## Security Concerns
-* Validate CLI input to prevent runtime execution crashes or unexpected input failures. [INFERRED]
+* Validate all user inputs to prevent unexpected runtime execution crashes. [INFERRED]
 
 ## Maintainability Concerns
-* Preserve clean Markdown formatting in documentation files. [INFERRED]
-* Adhere to Python PEP 8 conventions for readable, well-typed code. [INFERRED]
+* Ensure Markdown documentation remains structured and readable. [INFERRED]
+* Follow standard Python PEP 8 formatting rules. [INFERRED]
 
 ---
 
 # CRITICAL_FILES
 
 * `README.md`
-  * **Responsibility**: Base documentation file and primary target for test pull requests. [FACT]
-  * **Why changes are risky**: Deletion leaves the repository without a primary landing page. [FACT]
+  * **Responsibility**: Primary documentation file and standard diff target for test pull requests. [FACT]
+  * **Why changes are risky**: Deletion removes the main repository landing page. [FACT]
 
 * `KnowledgeBase.md`
-  * **Responsibility**: Contains long-term project memory, rules, and guidelines for AI review engines. [FACT]
-  * **Why changes are risky**: Corrupted or inaccurate modifications distort automated AI reviewer behavior. [FACT]
+  * **Responsibility**: Defines system architecture, conventions, and review rules for AI tools. [FACT]
+  * **Why changes are risky**: Corrupted or inaccurate content distorts automated AI code review decisions. [FACT]
 
 * `main.py`
-  * **Responsibility**: Implements user age prompting and voting eligibility validation logic. [FACT]
-  * **Why changes are risky**: Missing type conversion causes immediate runtime crashes (`TypeError`), and incorrect thresholds produce invalid domain outcomes. [FACT]
+  * **Responsibility**: Implements user age input and voting eligibility logic. [FACT]
+  * **Why changes are risky**: Missing string-to-int conversion causes immediate `TypeError` runtime crashes. [FACT]
 
 ---
 
 # KNOWN_RISKS
 
-* **Runtime Crash in `main.py`**: In Python 3, `input()` returns a string. Evaluating `age > 10` without converting `age` to an integer raises a runtime `TypeError`. [FACT]
-* **Business Rule Discrepancy**: The numerical check `age > 10` fails to reflect the legal Indian voting age requirement of 18. [FACT]
-* **Lack of Automated CI / Validation**: No CI pipelines, linters, or test runners are configured to catch syntax failures or type defects automatically. [FACT]
+* **Runtime Type Error in `main.py`**: `input()` returns `str`. Evaluating `age > 10` raises `TypeError: '>' not supported between instances of 'str' and 'int'` in Python 3. [FACT]
+* **Domain Logic Error**: The numeric condition `age > 10` violates the legal requirement for voting in India (18 years). [FACT]
+* **Lack of CI Automated Testing**: No automated test suites or linters exist to catch runtime bugs or syntax errors before PR merging. [FACT]
 
 ---
 
 # FUTURE_IMPROVEMENTS
 
-* Wrap CLI user input in `main.py` with integer conversion and input validation (e.g., `try ... int(input()) ... except ValueError`). [INFERRED]
-* Align voting age threshold logic with statutory requirements (`age >= 18`). [INFERRED]
-* Correct spelling errors in CLI print statements (`Eligible`, `eligible`). [INFERRED]
-* Add a `.gitignore` file to avoid tracking unwanted local files. [INFERRED]
-* Configure automated GitHub Actions to lint Python code and check Markdown formatting. [INFERRED]
+* Convert CLI input to integer with error handling in `main.py` (e.g., using `try-except ValueError`). [INFERRED]
+* Correct eligibility condition in `main.py` to `age >= 18`. [INFERRED]
+* Fix spelling errors in output strings (`Eligible`, `eligible`). [INFERRED]
+* Add a `.gitignore` file to prevent tracking temporary files. [INFERRED]
+* Introduce a GitHub Actions workflow for automatic Python linting and testing. [INFERRED]
 
 ---
 
 # AI_REVIEW_CONTEXT
 
-* **Architectural Intent**: Keep the repository footprint simple and lightweight for testing repository integrations, PR automations, and AI review workflows. [FACT]
-* **Business Intent**: Provide a safe sandbox environment for internal team members to execute pull request tests without affecting production code. [FACT]
-* **Important Constraints**: Executable Python scripts must run without runtime type crashes, implement correct domain thresholds, and maintain clean text formatting. [FACT]
-* **Non-obvious Decisions**: Diff additions in `README.md` (e.g., `ertertre`) alongside simple script tests are standard sandbox testing artifacts. [FACT]
+* **Architectural Intent**: Keep the project lightweight and simple to allow internal workflow testing, PR automation verification, and AI review evaluation. [FACT]
+* **Business Intent**: Provide a safe sandbox environment for internal team members to execute tests without production risks. [FACT]
+* **Important Constraints**: Standard CLI Python scripts must execute without runtime type exceptions, utilize correct domain rules, and maintain clear formatting. [FACT]
+* **Non-obvious Decisions**: Test additions in `README.md` (e.g., `ertertre`) are expected sandbox artifacts introduced during PR testing operations. [FACT]
