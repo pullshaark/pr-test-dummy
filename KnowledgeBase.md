@@ -5,7 +5,7 @@ The `pr-test-dummy` repository serves as a minimal sandbox environment for testi
 
 ## Core Features
 * Markdown documentation sandbox (`README.md`, `KnowledgeBase.md`). [FACT]
-* Command-line test scripts (`main.py` for voting age verification testing). [FACT]
+* Command-line test script (`main.py` for voting age verification testing). [FACT]
 * Target project for testing repository integrations and PR automated review engines. [FACT]
 
 ## Users
@@ -49,7 +49,7 @@ The repository is a minimal sandbox composed of flat root-level markdown files a
 
 ## Important Modules
 * **Documentation & Memory Module**: Root markdown files (`README.md`, `KnowledgeBase.md`) used for workflow testing and storing review rules. [FACT]
-* **CLI Scripts Module**: Standalone Python scripts (`main.py`) executing CLI interaction logic. [FACT]
+* **CLI Scripts Module**: Standalone Python script (`main.py`) executing CLI interaction logic. [FACT]
 
 ## System Boundaries
 * Restricted strictly to local Python standard library execution and GitHub repository VCS boundaries. [FACT]
